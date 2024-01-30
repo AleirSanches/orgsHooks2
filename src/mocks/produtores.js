@@ -2,10 +2,10 @@ import green from '../assets/produtores/green.png';
 import grow from '../assets/produtores/grow.png';
 import jenny from '../assets/produtores/jenny-jack.png';
 import potager from '../assets/produtores/potager.png';
-import salada from '../assets/produtores/salada.png';
+import salada from '../assets/produtores/salad.png';
 
 const gerarNumeroRandonico = (min, max) => {
-    return Math.floor(Math.random()* (max- min + 1 ));
+    return Math.floor(Math.random() * (max - min + 1 ) + min);
 }
 
 const produtores = {
@@ -44,3 +44,5 @@ const produtores = {
         }
     ]
 }
+
+export default produtores;
