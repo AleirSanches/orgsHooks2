@@ -1,5 +1,5 @@
-import React, {useEffect, useState, FlatList} from 'react';
-import { Text } from 'react-native';
+import React, {useEffect, useState} from 'react';
+import { Text, FlatList } from 'react-native';
 import { carregaProdutores } from '../../../servicos/carregaDados';
 
 export default function Produtores() {
@@ -13,10 +13,14 @@ export default function Produtores() {
        
     }, []);
 
-    return <>
-      <Text>{titulo}</Text>
-      
-    </>
+    return <FlatList
+        data={lista}
+        renderItem = {({Item: {nome}}) => <Text>{nome}</Text>}
+        ListHeaderComponent  = {()=> < Text>{titulo}</Text>}
+        
+        
+    />
+
      
          
 
