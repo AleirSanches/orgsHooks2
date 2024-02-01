@@ -3,9 +3,8 @@ import Topo from './componentes/Topo.js' ;
 import Produtores  from './componentes/produtores.js';
 
 export default function Home () {
-    return <>
-    <Topo/>
-    <Produtores/>
+    return 
+      <Produtores topo ={Topo}/>
 
-    </>
+
 }
