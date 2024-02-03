@@ -12,6 +12,7 @@ function App() {
 const estilos =StyleSheet.create({
       tela:{
             flex:1,
+            backgroundColor:'#FFFFFF',
       }
 })
 
