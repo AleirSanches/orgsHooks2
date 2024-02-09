@@ -2,6 +2,13 @@ import React, {useMemo, useReducer} from 'react';
 import {Text, Image, View, StyleSheet, TouchableOpacity} from 'react-native';
 import Estrelas from '../../../componentes/estrelas';
 
+const nomesOrdenados =(nome) => {
+    return nome;
+}
+const estrelasAlinhadas = (estrelas) =>{
+    return estrelas;
+}
+
 const distanciaMetros = (distancia) =>{
     console.log("distancia em metros");
     return  ` ${distancia} m`;
@@ -13,9 +20,15 @@ export default function Produtor ({nome , imagem, distancia, estrelas}){
 
     );
 
+    const nomesTexto = nomesOrdenados(nome);
+    const estrelasTexto = estrelasAlinhadas(estrelas);
+
  
 
-    const dentancisTexto = distanciaMetros(distancia);
+    const dentancisTexto = useMemo( 
+        () => distanciaMetros(distancia),
+        [distancia]
+        );
     //const [selecionado, setSelecionado] = useState(false);
 
     return <TouchableOpacity 
@@ -25,8 +38,8 @@ export default function Produtor ({nome , imagem, distancia, estrelas}){
         <Image style={estilos.imagem} source ={imagem} />
         <View style={estilos.informacoes}>
             <View>
-            <Text style={estilos.nome}>{nome}</Text>
-            <Estrelas quantidade={estrelas}
+            <Text style={estilos.nome}>{nomesTexto }</Text>
+            <Estrelas quantidade={estrelasTexto}
                      editavel={selecionado}
                      grande={selecionado}
             />
