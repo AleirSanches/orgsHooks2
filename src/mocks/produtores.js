@@ -14,32 +14,32 @@ const produtores = {
         {
             nome: "Green",
             imagem: green,
-            distancia: ` ${gerarNumeroRandonico(1,500)} m `,
+            distancia:gerarNumeroRandonico(1,500),
             estrelas: gerarNumeroRandonico(1,5),
         },
         {
             nome: "Grow",
             imagem: grow,
-            distancia: ` ${gerarNumeroRandonico(1,500)} m `,
+            distancia:gerarNumeroRandonico(1,500),
             estrelas: gerarNumeroRandonico(1,5),
         },
         {
             nome: "Jenny & Jack",
             imagem: jenny,
-            distancia: ` ${gerarNumeroRandonico(1,500)} m `,
+            distancia:gerarNumeroRandonico(1,500),
             estrelas: gerarNumeroRandonico(1,5),
         },
         {
             nome: "Potager",
             imagem: potager,
-            distancia: ` ${gerarNumeroRandonico(1,500)} m `,
+            distancia:gerarNumeroRandonico(1,500),
             estrelas: gerarNumeroRandonico(1,5),
         },
 
         {
             nome: "Salada",
             imagem: salada,
-            distancia: ` ${gerarNumeroRandonico(1,500)} m `,
+            distancia:gerarNumeroRandonico(1,500),
             estrelas: gerarNumeroRandonico(1,5),
         }
     ]
